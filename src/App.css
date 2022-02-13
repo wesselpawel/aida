@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@font-face {
+    font-family: vener;
+    src: url('./fonts/vener.otf');
+}
+html, *{
+    margin:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+  background-image: url('./images/bg.png');
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.navbar-wrapper{
+    width:100%;
+    height:100px;
+    display:flex;
+    justify-content: center;
+    box-shadow: 0px 2px 3px 0px rgb(0 0 0 / 30%);
+    background-color: #d1d1d1;
+    text-align: center;
+}
+.navbar-wrapper img{
+    max-height: 100%;
+    margin-top: 11px;
+}
+
+.content{
+  width:100%;
+  display:flex;
+  justify-content: center;
+  text-align: center;
+}
+.items{
+  width:100%;
+  min-height:100vh;
+  margin-top:2%;
+
+}
+.item{
+  text-align: center;
+  display:inline-block;
+  margin:20px;
+  position:relative;
+  width:40%;
+}
+ul{
+  list-style-type: none;
+}
+.item h1{
+  color:#25408f;
+  font-family: vener;
+}
+.headline{
+  color:#25408f;
+  text-align: center;
+  margin-top:85px;
+  font-size:72px;
+  font-family: vener;
+}
+.quote-wrapper{
+  width:50%;
+  height:100%;
+  margin-left: auto;
+  margin-right: auto;
+  position:relative;
+}
+.quote{
+  font-family: 'Architects Daughter', cursive;
+  color:#25408f;
+  text-align: center;
+  margin-bottom: 400px;
+  margin-top: 300px;
+  font-size:1.5rem;
+}
+.quote-wrapper::before{
+  font-family: 'Architects Daughter', cursive;
+  content:',,';
+  font-size: 150px;
+  position:absolute;
+  left:-10%;
+  top:-10%;
+  color:#25408f91;
+}
+.quote-wrapper::after{
+  font-family: 'Architects Daughter', cursive;
+  content:',,';
+  font-size: 150px;
+  position:absolute;
+  left:100%;
+  top:-150px;
+  color:#25408f91;
+}
+img{
+  height:80%;
+  margin-bottom: 30px;
+}
+table,td {
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
+
+  font-size:22px;
+  font-family: vener;
+}
+.new-offer{
+  margin-top:30px;
+}
+.nav-menu{
+  position:fixed;
+  width:200px;
+  height:400px;
+  left:25px;
+  top:50%;
+  margin-top:-200px;
+}
+.nav-item{
+  background-color: #25408f56;
+  width:15px;
+  height:15px;
+  border-radius: 50%;
+  border:2px solid rgba(128, 128, 128, 0.507);
+  display:block;
+  float:left;
+  text-align: center;
+}
+.nav-itemblue{
+  background-color: #25408f;
+  width:15px;
+  height:15px;
+  border-radius: 50%;
+  border:2px solid rgba(128, 128, 128, 0.507);
+  display:block;
+  float:left;
+  text-align: center;
+}
+.line{
+  opacity:0.3;
+  margin-bottom:-10px;
+}
+.kontakt{
+  margin-top:100px;
+  text-align: center;
+  font-family: vener;
+  font-size:2em;
+  padding:20px;
+}
+.map{
+  width:300px;
+  height:400px;
+  margin-left:auto;
+  margin-right: auto;
+}
+.show-map{
+  background-color: #25408f;
+  color:white;
+  border: none;
+  font-family: vener;
+  font-size: 26px;
+}
+.nav-button{
+  border: none;
+  font-family: vener;
+  font-size: 26px;
+  background-color: inherit;
+  cursor:pointer;
+}
+.contact-list img{
+  max-width: 50%;
+}
+.contact-list{
+  display:inline-block;
+  width:100%;
+}
+.footer{
+  margin-top:20px;
+  background-color: #e0e0e0;
+  width:100%;
+  text-align: center;
+  color: white;
+}
+@media all and (min-width: 1025px) and (max-width: 1350px) {
+  .quote-wrapper::before{top:10%;}.contact-list img{max-width: 60%;}
+}
+  @media all and (min-width: 768px) and (max-width: 1024px) {
+    .nav-menu{top:700px;} .items{width:100%;}.item{width:60%;}.quote-wrapper{width:70%;}.quote-wrapper::before{top:30%;}
+  }
+
+  @media all and (min-width: 481px) and (max-width: 767px) {
+    .nav-menu{top:700px;} .items{width:100%;text-align: center;}.item{width:100%;}.quote-wrapper{width:70%;}.quote-wrapper::before{top:60%;}
+  }
+  
+  
+  @media all and (max-width: 480px) {
+    .nav-menu{display:none;}.quote{margin-top:200px;}.items{width:100%;margin-left:-25%;}.item{width:100%;}.quote-wrapper{width:80%;}.quote-wrapper::before{top:70%;}.quote-wrapper::after{left:94%;}.headline{font-size:48px;}
+  }
