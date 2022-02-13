@@ -37,7 +37,7 @@ class App extends react.Component {
       <div className="content-wrapper">
       <section>
         <div className="quote-wrapper">
-        <h1 className="quote">Firma to nie nazwa , stos papierów i zera na koncie. To mieszanka ludzkich doświadczeń, relacji i zaangażowania. Za każdym biznesem stoi człowiek i to właśnie do niego kieruję swoją ofertę.</h1>
+        <h1 className="quote">Firma to nie nazwa, stos papierów i zera na koncie. To mieszanka ludzkich doświadczeń, relacji i zaangażowania. Za każdym biznesem stoi człowiek i to właśnie do niego kieruję swoją ofertę.</h1>
         </div>
       </section>
       
@@ -47,15 +47,15 @@ class App extends react.Component {
         <ul className="items">
           <li className="item">
             <img src={papiery} alt="papiery"/>
-            <h1>Księga przychodów i rozchodów, handlowa</h1>
+            <strong><h1>PODATKOWA KSIĘGA PRZYCHODÓW I ROZCHODÓW</h1></strong>
           </li>
           <li className="item">
             <img src={klaser} alt="papiery"/>
-            <h1>Ewidencja ryczałtowa</h1>
+            <strong><h1>EWIDENCJA RYCZAŁTOWA</h1></strong>
           </li>
           <li className="item">
             <img src={waga} alt="papiery"/>
-            <h1>Kadry i płace</h1>
+            <strong><h1>KADRY I PŁACE</h1></strong>
           </li>
         </ul>
       </div>
@@ -64,37 +64,38 @@ class App extends react.Component {
       <h1 id="cennik" className="headline">Cennik</h1>
       <table className="new-offer">
         <tr>
-        <th>Podatkowa księga przychodów i rozchodów</th><td colspan="2">Cena</td>
-        </tr>
-        <tr><th>do 10 dokumentów</th><td>170zł -</td><td>200zł</td></tr>
-        <tr><th>od 10 - 30 dokumentów</th><td>200zł -</td><td>250zł</td></tr>
-        <tr><th>od 30 - 50 dokumentów</th><td>270zł -</td><td>350zł</td></tr>
-        <tr><th>powyżej 50 dokumentów</th><td colspan="2">wycena indywidualna</td></tr>
+        <th>Podatkowa księga przychodów i rozchodów</th><th colspan="2">Cena</th>
+        
+        </tr><br/>
+        <tr><td>do 10 dokumentów</td><td>170zł - 200zł</td></tr>
+        <tr><td>od 10 - 30 dokumentów</td><td>200zł - 250zł</td></tr>
+        <tr><td>od 30 - 50 dokumentów</td><td>270zł - 350zł</td></tr>
+        <tr><td>powyżej 50 dokumentów</td><td colspan="2">wycena indywidualna</td></tr>
       </table>
 
       <table className="new-offer">
         <tr>
-        <th>Obsługa kadrowo - płacowa</th><td colspan="2">Cena</td>
-        </tr>
-        <tr><th>umowa zlecenie</th><td colspan="2">40zł/ osobę</td></tr>
-        <tr><th>umowa o pracę</th><td colspan="2">50zł/ osobę</td></tr>
-        <tr><th>zus właściciela za 1 miesiąc</th><td colspan="2">40zł</td></tr>
-        <tr><th>powyżej 50 dokumentów</th><td colspan="2">wycena indywidualna</td></tr>
+        <th>Obsługa kadrowo - płacowa</th><th colspan="2">Cena</th>
+        </tr><br/>
+        <tr><td>umowa zlecenie</td><td colspan="2">40zł/ osobę</td></tr>
+        <tr><td>umowa o pracę</td><td colspan="2">50zł/ osobę</td></tr>
+        <tr><td>zus właściciela za 1 miesiąc</td><td colspan="2">40zł</td></tr>
+        <tr><td>powyżej 50 dokumentów</td><td colspan="2">wycena indywidualna</td></tr>
       </table>
 
       <table className="new-offer">
         <tr>
-        <th>Ryczałt ewidencjonowany</th><td colspan="2">Cena</td>
-        </tr>
-        <tr><th>do 10 dokumentów</th><td>100zł -</td><td>150zł</td></tr>
-        <tr><th>od 10 - 30 dokumentów</th><td>200zł -</td><td>250zł</td></tr>
+        <th>Ryczałt ewidencjonowany</th><th colspan="2">Cena</th>
+        </tr><br/>
+        <tr><td>do 10 dokumentów</td><td>100zł - 150zł</td></tr>
+        <tr><td>od 10 - 30 dokumentów</td><td>200zł - 250zł</td></tr>
       </table>
       
       <table className="new-offer">
         <tr>
-        <th>PIT-y roczne</th><td colspan="2">Cena</td>
-        </tr>
-        <tr><th>PIT-37/PIT-36</th><td colspan="2">50zł</td></tr>
+        <th>PIT-y roczne</th><th colspan="2">Cena</th>
+        </tr><br/>
+        <tr><td>PIT-37/PIT-36</td><td colspan="2">50zł</td></tr>
       </table>
       </section>
      
@@ -102,27 +103,27 @@ class App extends react.Component {
     <div className="nav-menu">
       <table>
         <tr><td colspan="2"><div className={ this.state.whichActive==='oferta' ? 'nav-itemblue' : 'nav-item' }></div></td><div><Link to="oferta"><button value="oferta" onClick={() => this.setState({whichActive:'oferta'})} className="nav-button" >OFERTA</button></Link></div></tr>
-        <th><img className="line" src={line} alt="line"/></th>
+        <td><img className="line" src={line} alt="line"/></td>
         <tr><td colspan="2"><div className={ this.state.whichActive==='cennik' ? 'nav-itemblue' : 'nav-item' }></div></td><div><Link to="cennik"><button value="cennik" onClick={() => this.setState({whichActive:'cennik'})} className="nav-button" >CENNIK</button></Link></div></tr>
-        <th><img className="line" src={line} alt="line"/></th>
+        <td><img className="line" src={line} alt="line"/></td>
         <tr><td colspan="2"><div className={ this.state.whichActive==='kontakt' ? 'nav-itemblue' : 'nav-item' }></div></td><div><Link to="kontakt"><button value="kontakt" onClick={() => this.setState({whichActive:'kontakt'})} className="nav-button" >kontakt</button></Link></div></tr>
       </table>
     </div>
     <h1 id="kontakt" className="headline">Dane kontaktowe</h1>
     <section className="kontakt">
-      Biuro Rachunkowe Aida<br/>
-      sandra jasińska<br/>
-      81-133 Gdynia<br/>
-      podchorążych 10 a (pierwsze piętro)<br/>
-      tel. 603 395 723
-      email: ksiegowosc.aida@gmail.com
+     <strong> BIURO RACHUNKOWE AIDA<br/>
+      SANDRA JASIŃSKA<br/>
+      81-133 GDYNIA<br/>
+      PODCHORĄŻYCH 10 A (PIERWSZE PIĘTRO)<br/>
+      TEL. 603 395 723<br/>
+      EMAIL: ksiegowosc.aida@gmail.com </strong>
       <div className="map">
           
           <button
           onClick={() => this.setState({visible:!this.state.visible})}
           className="show-map"
           >
-              Pokaż na mapie
+              POKAŻ NA MAPIE
           </button>
           <Map
           style={this.state.style} 
@@ -139,7 +140,7 @@ class App extends react.Component {
           </div>
           <ul className="contact-list">
           <a href="https://www.facebook.com/biuroaida/" rel="noreferrer" target="_blank"><li className="item"><img src={facebook} alt="?"/></li></a>
-          <a href="https://biuro-rachunkowe-aida-biuro-podchorazych.business.site/?m=true" rel="noreferrer" target="_blank"> <li className="item"><img src={mybusiness} alt="?"/></li></a>
+          <a href="https://biuro-rachunkowe-aida-biuro-podchorazych.business.site/?m=true" rel="noreferrer" target="_blank"><li className="item"><img src={mybusiness} alt="?"/></li></a>
             <a href="https://www.trojmiasto.pl/Biuro-Rachunkowe-Aida-S-Jasinska-o75098.html" rel="noreferrer" target="_blank"><li className="item"><img src={trojmiasto} alt="?"/></li></a>
             <a href="https://www.cik.org.pl/biuro/biuro-rachunkowe-aida-sandra-jasinska-8551" rel="noreferrer" target="_blank"><li className="item"><img width="25%" src={cik} alt="?"/></li></a>
           </ul>

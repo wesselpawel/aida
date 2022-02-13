@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @font-face {
     font-family: vener;
     src: url('./fonts/vener.otf');
@@ -56,7 +58,7 @@ ul{
 }
 .item h1{
   color:#25408f;
-  font-family: vener;
+  font-family: 'Roboto', sans-serif;
 }
 .headline{
   color:#25408f;
@@ -73,7 +75,7 @@ ul{
   position:relative;
 }
 .quote{
-  font-family: 'Architects Daughter', cursive;
+  font-family: 'Roboto', sans-serif;
   color:#25408f;
   text-align: center;
   margin-bottom: 400px;
@@ -85,8 +87,8 @@ ul{
   content:',,';
   font-size: 150px;
   position:absolute;
-  left:-10%;
-  top:-10%;
+  left:-5%;
+  top:-15%;
   color:#25408f91;
 }
 .quote-wrapper::after{
@@ -106,14 +108,14 @@ table,td {
   text-align: center;
   margin-left:auto;
   margin-right:auto;
-
+  font-family: 'Roboto', sans-serif;
   font-size:22px;
-  font-family: vener;
+  
 }
 .new-offer{
-  margin-top:30px;
+  margin-top:40px;
 }
-.nav-menu{
+.nav-menu{font-family: vener;
   position:fixed;
   width:200px;
   height:400px;
@@ -148,7 +150,7 @@ table,td {
 .kontakt{
   margin-top:100px;
   text-align: center;
-  font-family: vener;
+  font-family: 'Roboto', sans-serif;
   font-size:2em;
   padding:20px;
 }
@@ -162,8 +164,9 @@ table,td {
   background-color: #25408f;
   color:white;
   border: none;
-  font-family: vener;
+  font-family: 'Roboto', sans-serif;
   font-size: 26px;
+  margin: 30px 0 30px 0;
 }
 .nav-button{
   border: none;
@@ -184,7 +187,8 @@ table,td {
   background-color: #e0e0e0;
   width:100%;
   text-align: center;
-  color: white;
+  color: black;
+  font-size: 13px;
 }
 @media all and (min-width: 1025px) and (max-width: 1350px) {
   .quote-wrapper::before{top:10%;}.contact-list img{max-width: 60%;}
@@ -199,5 +203,5 @@ table,td {
   
   
   @media all and (max-width: 480px) {
-    .nav-menu{display:none;}.quote{margin-top:200px;}.items{width:100%;margin-left:-25%;}.item{width:100%;}.contact-list li{margin-left:-15%;}.quote-wrapper{width:80%;}.quote-wrapper::before{top:30%;}.quote-wrapper::after{left:94%;}.headline{font-size:48px;}.new-offer{color:black;}
+  html{background-image:none;background-color: white !important;color:black !important;} body{background-color: white !important;color:black !important;} .nav-menu{display:none;}.quote{margin-top:200px;margin-bottom: 200px;}.items{width:100%;margin-left:-25%;}.item{width:100%;}.contact-list img{width:100%;}.contact-list li{margin-left:-15%;width:100%;height:10%;}.quote-wrapper{width:80%;}.quote-wrapper::before{top:15%;}.quote-wrapper::after{left:94%;}.headline{font-size:48px;}.new-offer{color:black;}
   }
