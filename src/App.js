@@ -66,9 +66,9 @@ class App extends react.Component {
         <tr>
         <th>Podatkowa księga przychodów i rozchodów</th><td colspan="2">Cena</td>
         </tr>
-        <tr><th>do 10 dokumentów</th><td>170zł</td><td>200zł</td></tr>
-        <tr><th>od 10 - 30 dokumentów</th><td>200zł</td><td>250zł</td></tr>
-        <tr><th>od 30 - 50 dokumentów</th><td>270zł</td><td>350zł</td></tr>
+        <tr><th>do 10 dokumentów</th><td>170zł -</td><td>200zł</td></tr>
+        <tr><th>od 10 - 30 dokumentów</th><td>200zł -</td><td>250zł</td></tr>
+        <tr><th>od 30 - 50 dokumentów</th><td>270zł -</td><td>350zł</td></tr>
         <tr><th>powyżej 50 dokumentów</th><td colspan="2">wycena indywidualna</td></tr>
       </table>
 
@@ -86,8 +86,8 @@ class App extends react.Component {
         <tr>
         <th>Ryczałt ewidencjonowany</th><td colspan="2">Cena</td>
         </tr>
-        <tr><th>do 10 dokumentów</th><td>100zł</td><td>150zł</td></tr>
-        <tr><th>od 10 - 30 dokumentów</th><td>200zł</td><td>250zł</td></tr>
+        <tr><th>do 10 dokumentów</th><td>100zł -</td><td>150zł</td></tr>
+        <tr><th>od 10 - 30 dokumentów</th><td>200zł -</td><td>250zł</td></tr>
       </table>
       
       <table className="new-offer">
@@ -138,10 +138,10 @@ class App extends react.Component {
           </Map>
           </div>
           <ul className="contact-list">
-            <li className="item"><a href="https://www.facebook.com/biuroaida/" rel="noreferrer" target="_blank"><img src={mybusiness} alt="?"/></a></li>
-            <li className="item"><a href="https://biuro-rachunkowe-aida-biuro-podchorazych.business.site/?m=true" rel="noreferrer" target="_blank"><img src={trojmiasto} alt="?"/></a></li>
-            <li className="item"><a href="https://www.trojmiasto.pl/Biuro-Rachunkowe-Aida-S-Jasinska-o75098.html" rel="noreferrer" target="_blank"><img src={cik} alt="?"/></a></li>
-            <li className="item"><a href="https://www.cik.org.pl/biuro/biuro-rachunkowe-aida-sandra-jasinska-8551" rel="noreferrer" target="_blank"><img width="25%" src={facebook} alt="?"/></a></li>
+          <a href="https://www.facebook.com/biuroaida/" rel="noreferrer" target="_blank"><li className="item"><img src={facebook} alt="?"/></li></a>
+          <a href="https://biuro-rachunkowe-aida-biuro-podchorazych.business.site/?m=true" rel="noreferrer" target="_blank"> <li className="item"><img src={mybusiness} alt="?"/></li></a>
+            <a href="https://www.trojmiasto.pl/Biuro-Rachunkowe-Aida-S-Jasinska-o75098.html" rel="noreferrer" target="_blank"><li className="item"><img src={trojmiasto} alt="?"/></li></a>
+            <a href="https://www.cik.org.pl/biuro/biuro-rachunkowe-aida-sandra-jasinska-8551" rel="noreferrer" target="_blank"><li className="item"><img width="25%" src={cik} alt="?"/></li></a>
           </ul>
           <div className="footer">
             Wszelkie prawa zastrzeżone &copy; ksiegowosc.aida.pl
