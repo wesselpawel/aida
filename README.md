@@ -1,1 +1,1 @@
-www.ksiegowosc.aida.pl
+www.ksiegowosc-aida.pl
