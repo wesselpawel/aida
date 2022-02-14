@@ -3,6 +3,7 @@ import klaser from "./images/klaser.png"
 import papiery from "./images/papiery.png"
 import line from "./images/line.png"
 import waga from "./images/waga.png"
+import ksiega from "./images/ksiega.png"
 import facebook from "./images/facebook.png"
 import cik from "./images/cik.png"
 import mybusiness from "./images/mybusiness.png"
@@ -20,9 +21,10 @@ class App extends react.Component {
     this.state = {
       visible:false,
       style:{
-        width:'400px',
+        width:'100%',
         height:'300px',
-        overflow:'visible'
+        overflow:'hidden',
+        position:'relative'
       },
       whichActive:'',
     }
@@ -56,6 +58,10 @@ class App extends react.Component {
           <li className="item">
             <img src={waga} alt="papiery"/>
             <strong><h1>KADRY I PŁACE</h1></strong>
+          </li>
+          <li className="item">
+            <img src={ksiega} alt="papiery"/>
+            <strong><h1>KSIĘGA HANDLOWA</h1></strong>
           </li>
         </ul>
       </div>
@@ -116,8 +122,8 @@ class App extends react.Component {
       81-133 GDYNIA<br/>
       PODCHORĄŻYCH 10 A (PIERWSZE PIĘTRO)<br/>
       TEL. 603 395 723<br/>
-      EMAIL: ksiegowosc.aida@gmail.com </strong>
-      <div className="map">
+      EMAIL: ksiegowosc.aida@gmail.com </strong><br />
+     
           
           <button
           onClick={() => this.setState({visible:!this.state.visible})}
@@ -125,7 +131,9 @@ class App extends react.Component {
           >
               POKAŻ NA MAPIE
           </button>
+          <div className="map">
           <Map
+          defaultCenter={this.props.center}
           style={this.state.style} 
           google={this.props.google}
           zoom={15}
@@ -139,7 +147,7 @@ class App extends react.Component {
           </Map>
           </div>
           <ul className="contact-list">
-          <a href="https://www.facebook.com/biuroaida/" rel="noreferrer" target="_blank"><li className="item"><img src={facebook} alt="?"/></li></a>
+          <a href="https://www.facebook.com/biuroaida/" rel="noreferrer" target="_blank"><li className="item"><img  width="25%" src={facebook} alt="?"/></li></a>
           <a href="https://biuro-rachunkowe-aida-biuro-podchorazych.business.site/?m=true" rel="noreferrer" target="_blank"><li className="item"><img src={mybusiness} alt="?"/></li></a>
             <a href="https://www.trojmiasto.pl/Biuro-Rachunkowe-Aida-S-Jasinska-o75098.html" rel="noreferrer" target="_blank"><li className="item"><img src={trojmiasto} alt="?"/></li></a>
             <a href="https://www.cik.org.pl/biuro/biuro-rachunkowe-aida-sandra-jasinska-8551" rel="noreferrer" target="_blank"><li className="item"><img width="25%" src={cik} alt="?"/></li></a>
