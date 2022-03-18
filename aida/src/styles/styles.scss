@@ -2,45 +2,82 @@
 @import "./_variables";
 
 /*Styling elements*/
-
+body{
+    background-image: url('../images/Aidabackground.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 html, body, ul{
     margin:0;
     padding:0;
     list-style-type:none;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 a{
     color:inherit;
     text-decoration:none;
 }
-
+.all{
+.filter{
+    background-color: rgba(0, 0, 0, 0.774);
+    width:100%;
+    height:100vh;
+    position:absolute;
+    z-index:-1;
+    &::before{
+        content:'AIDA';
+        font-size: 50vw;
+        @extend %center;
+        height:100%;
+        color:rgba(255, 255, 255, 0.034);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        z-index:1;
+    }
+}
 header{
     @include header(100%, inline-flex,  3);
-    background-color: rgb(131, 167, 179);
+    background-color: rgba(0, 0, 0, 0.342);
     padding: 20px 0;
+    
     ul{
-        @include ul(100%, flex, space-between);
-        .first-item{
-                @extend %center;
-                width:15%;
-                img{
-                    width:100%;
-                }
-            }
+        @include ul(80%, flex, space-between);
+        margin: 0 auto;
         .second-item{
             @extend %center;
-            background-color: yellow;
-            width:30%;
-            margin: 0 25px;
+            color:white;
+            width:70%;
+            margin: 0 15%;
+            font-size:25px;
+            text-shadow: 2px 1px black;
             nav{
                 @extend %space;
                 width:100%;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                div{
+                    padding:25px;
+                }
             }
         }
-
         }
         
     }
+    .content{
+        @extend %center;
+        height: 100vh;
+        position:absolute;
+        width:100%;
+        top:0;
+        z-index:0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .text{
+        text-align: center;
+        width:50vw;
+        color:white;
+        font-size: 3vw;
+    }
+}
         /* add more if needed and remember to change width */
 
 

@@ -1,5 +1,5 @@
 /*imports*/
-header ul .first-item, header ul .second-item {
+.all .filter::before, .all header ul .second-item, .all .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11,7 +11,7 @@ header ul .first-item, header ul .second-item {
           justify-content: center;
 }
 
-header ul .second-item nav {
+.all header ul .second-item nav {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -21,12 +21,19 @@ header ul .second-item nav {
 }
 
 /*Styling elements*/
+body {
+  background-image: url("../images/Aidabackground.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 html, body, ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 a {
@@ -34,44 +41,77 @@ a {
   text-decoration: none;
 }
 
-header {
+.all .filter {
+  background-color: rgba(0, 0, 0, 0.774);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+}
+
+.all .filter::before {
+  content: 'AIDA';
+  font-size: 50vw;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.034);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  z-index: 1;
+}
+
+.all header {
   width: 100%;
   height: 70px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   z-index: 3;
-  background-color: #83a7b3;
+  background-color: rgba(0, 0, 0, 0.342);
   padding: 20px 0;
 }
 
-header ul {
+.all header ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 80%;
   height: 70px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 0 auto;
 }
 
-header ul .first-item {
-  width: 15%;
+.all header ul .second-item {
+  color: white;
+  width: 70%;
+  margin: 0 15%;
+  font-size: 25px;
+  text-shadow: 2px 1px black;
 }
 
-header ul .first-item img {
+.all header ul .second-item nav {
   width: 100%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-header ul .second-item {
-  background-color: yellow;
-  width: 30%;
-  margin: 0 25px;
+.all header ul .second-item nav div {
+  padding: 25px;
 }
 
-header ul .second-item nav {
+.all .content {
+  height: 100vh;
+  position: absolute;
   width: 100%;
+  top: 0;
+  z-index: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.all .text {
+  text-align: center;
+  width: 50vw;
+  color: white;
+  font-size: 3vw;
 }
 
 /* add more if needed and remember to change width */
