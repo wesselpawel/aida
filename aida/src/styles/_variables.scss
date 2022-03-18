@@ -1,0 +1,27 @@
+//Editable variables
+$headerHeight:70px;
+
+//Skeletons of elements...
+@mixin header($width, $display, $z-index){
+    width:$width;
+    height:$headerHeight;
+    display:$display;
+    z-index:$z-index;
+}
+@mixin ul($width, $display, $justify-content){
+    display:$display;
+    width:$width;
+    height:$headerHeight;
+    justify-content: $justify-content;
+}
+
+// Positioning
+%center{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+%space{
+    display:inline-flex;
+    justify-content: space-between;
+}

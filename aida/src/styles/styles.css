@@ -1,0 +1,78 @@
+/*imports*/
+header ul .first-item, header ul .second-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header ul .second-item nav {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/*Styling elements*/
+html, body, ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  z-index: 3;
+  background-color: #83a7b3;
+  padding: 20px 0;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 70px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header ul .first-item {
+  width: 15%;
+}
+
+header ul .first-item img {
+  width: 100%;
+}
+
+header ul .second-item {
+  background-color: yellow;
+  width: 30%;
+  margin: 0 25px;
+}
+
+header ul .second-item nav {
+  width: 100%;
+}
+
+/* add more if needed and remember to change width */
+/*# sourceMappingURL=styles.css.map */

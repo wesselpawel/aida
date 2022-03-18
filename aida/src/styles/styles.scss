@@ -1,0 +1,47 @@
+/*imports*/
+@import "./_variables";
+
+/*Styling elements*/
+
+html, body, ul{
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    box-sizing: border-box;
+}
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+header{
+    @include header(100%, inline-flex,  3);
+    background-color: rgb(131, 167, 179);
+    padding: 20px 0;
+    ul{
+        @include ul(100%, flex, space-between);
+        .first-item{
+                @extend %center;
+                width:15%;
+                img{
+                    width:100%;
+                }
+            }
+        .second-item{
+            @extend %center;
+            background-color: yellow;
+            width:30%;
+            margin: 0 25px;
+            nav{
+                @extend %space;
+                width:100%;
+            }
+        }
+
+        }
+        
+    }
+        /* add more if needed and remember to change width */
+
+
+
