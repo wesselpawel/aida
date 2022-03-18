@@ -12,37 +12,71 @@ html, body, ul{
     padding:0;
     list-style-type:none;
     box-sizing: border-box;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 a{
     color:inherit;
     text-decoration:none;
 }
 .all{
-.filter{
-    background-color: rgba(0, 0, 0, 0.774);
-    width:100%;
-    height:100vh;
-    position:absolute;
-    z-index:-1;
-    &::before{
-        content:'AIDA';
-        font-size: 50vw;
-        @extend %center;
-        height:100%;
-        color:rgba(255, 255, 255, 0.034);
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        z-index:1;
+    .filter{
+        background-color: rgba(0, 0, 0, 0.774);
+        width:100%;
+        height:100vh;
+        position:absolute;
+        z-index:-1;
+        &::before{
+            content:'AIDA';
+            font-size: 50vw;
+            @extend %center;
+            height:100%;
+            color:rgba(255, 255, 255, 0.025);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            z-index:1;
+        }
     }
-}
+    width:100vw;
+    .content{
+        align-items: center;
+        justify-content: space-between;
+        display:flex;
+        height: 80vh;
+        width:80%;
+        margin: 0 auto;
+        top:0;
+        z-index:0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .text{
+        text-align: center;
+        width:50%;
+        color:rgba(255, 255, 255, 0.596);
+        font-size: 2vw;
+        text-align: left;
+        @media screen and (max-width: $small) {
+            font-size: 5vw;
+            width:90%;
+            color:rgb(173, 173, 173);
+        }
+        
+    }
+
 header{
     @include header(100%, inline-flex,  3);
-    background-color: rgba(0, 0, 0, 0.342);
-    padding: 20px 0;
-    
+    background-color: rgba(255, 255, 255, 0.055);
+    padding: 10px 0;
+
     ul{
         @include ul(80%, flex, space-between);
         margin: 0 auto;
+        @media screen and (max-width: $medium) {
+            display:flex;
+            justify-content: center;
+            width:100%;
+        }
+        .first-item{
+            
+        }
         .second-item{
             @extend %center;
             color:white;
@@ -50,33 +84,31 @@ header{
             margin: 0 15%;
             font-size:25px;
             text-shadow: 2px 1px black;
+            @media screen and (max-width: $small) {
+                position:absolute;
+                width:100%;
+                margin: 0 auto;
+                align-items: center;
+                bottom:0;
+                left:0;
+                font-size: 18px;
+                background-color: black;
+            }
             nav{
+                z-index:4;
                 @extend %space;
                 width:100%;
                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                
                 div{
-                    padding:25px;
+                    padding:0 25px;
                 }
             }
         }
         }
         
     }
-    .content{
-        @extend %center;
-        height: 100vh;
-        position:absolute;
-        width:100%;
-        top:0;
-        z-index:0;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    .text{
-        text-align: center;
-        width:50vw;
-        color:white;
-        font-size: 3vw;
-    }
+    
 }
         /* add more if needed and remember to change width */
 

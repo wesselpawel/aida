@@ -1,6 +1,7 @@
 //Editable variables
 $headerHeight:70px;
-
+$small: 480px;
+$medium: 1023px;
 //Skeletons of elements...
 @mixin header($width, $display, $z-index){
     width:$width;

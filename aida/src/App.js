@@ -7,6 +7,11 @@ function App() {
       <div>
       <header>
         <ul>
+          <li className='first-item'>
+            <div>
+              <img src={logo} alt=""/>
+            </div>
+          </li>
           <li className='second-item'>
             <nav>
               <div>OFERTA</div>
